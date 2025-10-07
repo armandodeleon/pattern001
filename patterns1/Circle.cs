@@ -1,10 +1,10 @@
 namespace patterns1;
 
-public class Circle
+public class OCPCircle: IShapeWithArea
 {
     public double Area { get; }
 
-    public Circle(double radius)
+    public OCPCircle(double radius)
     {
         Area = radius * radius * Math.PI;
     }
