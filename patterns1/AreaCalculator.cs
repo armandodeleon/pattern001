@@ -6,6 +6,6 @@ public class OCPAreaCalculator
     public double Area => _area;
     
     // Twice overloaded methods
-    public void AddShape(IShapeWithArea square) => _area += (square.Area);
+    public void AddShape(IShapeWithArea shape) => _area += (shape.Area);
     
 }
