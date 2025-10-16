@@ -1,17 +1,17 @@
 namespace BumbleBikesLibrary;
 
-public abstract class Bicycle
+public abstract class Bicycle: IBicycle
 {
-    protected string ModelName { get; set; }
+    public string ModelName { get; set; }
 
-    private int Year { get; set; }
-    private string SerialNumber { get; }
-    protected BicyclePaintColors Color { get; init; }
-    protected BicycleGeometries Geometry { get; init; } 
-    protected SuspensionTypes Suspension { get; init; }
-    protected ManufacturingStatus BuildStatus { get; set; }
+    public int Year { get; set; }
+    public string SerialNumber { get; }
+    public BicyclePaintColors Color { get; set; }
+    public BicycleGeometries Geometry { get; set; } 
+    public SuspensionTypes Suspension { get; set; }
+    public ManufacturingStatus BuildStatus { get; set; }
 
-    public Bicycle()
+    protected Bicycle()
     {
         ModelName = string.Empty;
         SerialNumber = Guid.NewGuid().ToString(); // Globally unique identifier. 
